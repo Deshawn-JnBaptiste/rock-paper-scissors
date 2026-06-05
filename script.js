@@ -14,10 +14,18 @@ function getComputerChoice() {
     }
 
    return console.log(computerChoice)
-
-   
-   
 }
 
-getComputerChoice()
 
+function getHumanChoice() {
+    let humanChoice = prompt("Type: Rock, Paper or Scissors")
+
+   return console.log(humanChoice)
+
+}
+
+let playerScore;
+let computerScore;
+
+getComputerChoice()
+getHumanChoice()
