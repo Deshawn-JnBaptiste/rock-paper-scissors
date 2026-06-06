@@ -31,9 +31,11 @@ function playRound (humanChoice, computerChoice) {
     }
     else if (humanChoice == "rock" && computerChoice == "paper") {
         console.log("You lost, the computer chose paper")
+        computerScore++;
     }
     else if (humanChoice == "rock" && computerChoice == "scissors") {
         console.log("You won, the computer chose scissors")
+        humanScore++;
     }
 
     //Player chooses Paper
@@ -42,9 +44,11 @@ function playRound (humanChoice, computerChoice) {
     }
     else if (humanChoice == "paper" && computerChoice == "scissors") {
         console.log("You lost, the computer chose scissors")
+        computerScore++;
     }
     else if (humanChoice == "paper" && computerChoice == "rock") {
         console.log("You won, the computer chose rock")
+        humanScore++;
     }
 
     //Player chooses Scissors
@@ -53,9 +57,11 @@ function playRound (humanChoice, computerChoice) {
     }
     else if (humanChoice == "scissors" && computerChoice == "rock") {
         console.log("You lost, the computer chose rock")
+        computerScore++;
     }
     else if (humanChoice == "scissors" && computerChoice == "paper") {
         console.log("You won, the computer chose paper")
+        humanScore++;
     }
 }
 
