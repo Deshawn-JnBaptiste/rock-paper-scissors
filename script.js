@@ -3,29 +3,33 @@ function getComputerChoice() {
 
     let randomNum = Math.floor(Math.random() * 3) + 1;
     if (randomNum == 1) {
-        computerChoice = "Rock"
+        computerChoice = "rock"
     }
     else if (randomNum == 2) {
-        computerChoice = "Paper"
+        computerChoice = "paper"
     }
 
     else if (randomNum == 3) {
-        computerChoice = "Scissors"
+        computerChoice = "scissors"
     }
 
-   return console.log(computerChoice)
+   return computerChoice;
 }
 
 
 function getHumanChoice() {
     let humanChoice = prompt("Type: Rock, Paper or Scissors")
 
-   return console.log(humanChoice)
+   return humanChoice;
 
 }
 
-let playerScore;
-let computerScore;
+function playRound (humanChoice, computerChoice) {
+
+}
+
+let humanScore = 0;
+let computerScore = 0;
 
 getComputerChoice()
 getHumanChoice()
