@@ -20,12 +20,43 @@ function getComputerChoice() {
 function getHumanChoice() {
     let humanChoice = prompt("Type: Rock, Paper or Scissors")
 
-   return humanChoice;
+   return humanChoice.toLowerCase();
 
 }
 
 function playRound (humanChoice, computerChoice) {
+    //Player chooses Rock
+    if (humanChoice == "rock" && computerChoice == "rock") {
+        console.log("You tie, You both chose rock.")
+    }
+    else if (humanChoice == "rock" && computerChoice == "paper") {
+        console.log("You lost, the computer chose paper")
+    }
+    else if (humanChoice == "rock" && computerChoice == "scissors") {
+        console.log("You won, the computer chose scissors")
+    }
 
+    //Player chooses Paper
+    else if (humanChoice == "paper" && computerChoice == "paper") {
+        console.log("You tie, You both chose paper.")
+    }
+    else if (humanChoice == "paper" && computerChoice == "scissors") {
+        console.log("You lost, the computer chose scissors")
+    }
+    else if (humanChoice == "paper" && computerChoice == "rock") {
+        console.log("You won, the computer chose rock")
+    }
+
+    //Player chooses Scissors
+    else if (humanChoice == "scissors" && computerChoice == "scissors") {
+        console.log("You tie, You both chose scissors.")
+    }
+    else if (humanChoice == "scissors" && computerChoice == "rock") {
+        console.log("You lost, the computer chose rock")
+    }
+    else if (humanChoice == "scissors" && computerChoice == "paper") {
+        console.log("You won, the computer chose paper")
+    }
 }
 
 let humanScore = 0;
