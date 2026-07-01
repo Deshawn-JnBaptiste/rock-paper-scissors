@@ -67,12 +67,9 @@ function playGame() {
         console.log("You won, the computer chose paper")
         humanScore++;
         }
-    }
-    //Call the playRound function 5 times
-    for (let i = 0; i < 5; i++) {
-     playRound(getHumanChoice(), getComputerChoice())
-    }
-}
+    }   
+ }
+
 
 playGame()
 
