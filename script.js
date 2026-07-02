@@ -103,7 +103,7 @@ function playGame() {
             scissorsButton.disabled = true;
 
         } else if (computerScore >= 5) {
-            winner.textContent = "You lost to the computer... -  Reload the page to play again."
+            winner.textContent = "You lost to the computer -  Reload the page to play again."
             document.body.appendChild(winner)
 
             rockButton.disabled = true;
