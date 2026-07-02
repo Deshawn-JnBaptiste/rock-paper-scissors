@@ -95,12 +95,20 @@ function playGame() {
 
         const winner = document.createElement("p")
         if (humanScore >=  5) {
-            winner.textContent = "Congratulations, You Win!"
+            winner.textContent = "Congratulations, You Win! -  Reload the page to play again."
             document.body.appendChild(winner)
 
+            rockButton.disabled = true;
+            paperButton.disabled = true;
+            scissorsButton.disabled = true;
+
         } else if (computerScore >= 5) {
-            winner.textContent = "You lost to the computer..."
+            winner.textContent = "You lost to the computer... -  Reload the page to play again."
             document.body.appendChild(winner)
+
+            rockButton.disabled = true;
+            paperButton.disabled = true;
+            scissorsButton.disabled = true;
         }
 
     }
