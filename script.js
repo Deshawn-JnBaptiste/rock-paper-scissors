@@ -67,10 +67,28 @@ function playGame() {
         console.log("You won, the computer chose paper")
         humanScore++;
         }
-    }   
+    }
+    //UI Code
+    const rockButton = document.querySelector("#rockButton")
+    const paperButton = document.querySelector("#paperButton")
+    const scissorsButton = document.querySelector("#scissorsButton")
+    
+
+    rockButton.addEventListener("click", () => {
+        playRound("rock", getComputerChoice())
+    })
+
+    paperButton.addEventListener("click", () => {
+        playRound("paper", getComputerChoice())
+    })
+
+    scissorsButton.addEventListener("click", () => {
+        playRound("scissors", getComputerChoice())
+    })
+    
  }
 
+ playGame();
 
-playGame()
 
 
