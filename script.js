@@ -27,44 +27,45 @@ function getHumanChoice() {
 function playGame() {
     let humanScore = 0;
     let computerScore = 0;
+    const results = document.querySelector("#Results")
 
     function playRound (humanChoice, computerChoice) {
         //Player chooses Rock
         if (humanChoice == "rock" && computerChoice == "rock") {
-        console.log("You tie, You both chose rock.")
+        results.textContent = "You tie, You both chose rock."
         }
         else if (humanChoice == "rock" && computerChoice == "paper") {
-        console.log("You lost, the computer chose paper")
+        results.textContent = "You lost, the computer chose paper"
         computerScore++;
         }
         else if (humanChoice == "rock" && computerChoice == "scissors") {
-        console.log("You won, the computer chose scissors")
+        results.textContent = "You won, the computer chose scissors"
         humanScore++;
         }
 
         //Player chooses Paper
         else if (humanChoice == "paper" && computerChoice == "paper") {
-        console.log("You tie, You both chose paper.")
+        results.textContent = "You tie, You both chose paper."
         }
         else if (humanChoice == "paper" && computerChoice == "scissors") {
-        console.log("You lost, the computer chose scissors")
+        results.textContent = "You lost, the computer chose scissors"
         computerScore++;
         }
         else if (humanChoice == "paper" && computerChoice == "rock") {
-        console.log("You won, the computer chose rock")
+        results.textContent = "You won, the computer chose rock"
         humanScore++;
         }
 
         //Player chooses Scissors
         else if (humanChoice == "scissors" && computerChoice == "scissors") {
-        console.log("You tie, You both chose scissors.")
+        results.textContent = "You tie, You both chose scissors."
         }
         else if (humanChoice == "scissors" && computerChoice == "rock") {
-        console.log("You lost, the computer chose rock")
+        results.textContent = "You lost, the computer chose rock"
         computerScore++;
         }
         else if (humanChoice == "scissors" && computerChoice == "paper") {
-        console.log("You won, the computer chose paper")
+        results.textContent = "You won, the computer chose paper"
         humanScore++;
         }
     }
@@ -85,7 +86,6 @@ function playGame() {
     scissorsButton.addEventListener("click", () => {
         playRound("scissors", getComputerChoice())
     })
-    
  }
 
  playGame();
