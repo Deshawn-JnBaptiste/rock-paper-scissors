@@ -17,17 +17,19 @@ function getComputerChoice() {
 }
 
 
-function getHumanChoice() {
+/*function getHumanChoice() {
     let humanChoice = prompt("Type: Rock, Paper or Scissors")
 
    return humanChoice.toLowerCase();
 
-}
+}*/
 
 function playGame() {
     let humanScore = 0;
     let computerScore = 0;
-    const results = document.querySelector("#Results")
+    const results = document.querySelector("#results")
+    const humanScoreResults = document.querySelector("#humanScore")
+    const computerScoreResults = document.querySelector("#computerScore")
 
     function playRound (humanChoice, computerChoice) {
         //Player chooses Rock
