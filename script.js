@@ -31,6 +31,25 @@ function playGame() {
     const humanScoreResults = document.querySelector("#humanScore")
     const computerScoreResults = document.querySelector("#computerScore")
 
+    
+    const rockButton = document.querySelector("#rockButton")
+    const paperButton = document.querySelector("#paperButton")
+    const scissorsButton = document.querySelector("#scissorsButton")
+
+    //Get User Choice
+    rockButton.addEventListener("click", () => {
+        playRound("rock", getComputerChoice())
+    })
+
+    paperButton.addEventListener("click", () => {
+        playRound("paper", getComputerChoice())
+    })
+
+    scissorsButton.addEventListener("click", () => {
+        playRound("scissors", getComputerChoice())
+    })
+
+
     function playRound (humanChoice, computerChoice) {
         //Player chooses Rock
         if (humanChoice == "rock" && computerChoice == "rock") {
@@ -70,24 +89,9 @@ function playGame() {
         results.textContent = "You won, the computer chose paper"
         humanScore++;
         }
+        humanScoreResults.textContent = `Human Score: ${humanScore}`;
+        computerScoreResults.textContent = `Computer Score: ${computerScore}`;
     }
-    //UI Code
-    const rockButton = document.querySelector("#rockButton")
-    const paperButton = document.querySelector("#paperButton")
-    const scissorsButton = document.querySelector("#scissorsButton")
-    
-
-    rockButton.addEventListener("click", () => {
-        playRound("rock", getComputerChoice())
-    })
-
-    paperButton.addEventListener("click", () => {
-        playRound("paper", getComputerChoice())
-    })
-
-    scissorsButton.addEventListener("click", () => {
-        playRound("scissors", getComputerChoice())
-    })
  }
 
  playGame();
