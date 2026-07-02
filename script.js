@@ -89,8 +89,20 @@ function playGame() {
         results.textContent = "You won, the computer chose paper"
         humanScore++;
         }
+
         humanScoreResults.textContent = `Human Score: ${humanScore}`;
         computerScoreResults.textContent = `Computer Score: ${computerScore}`;
+
+        const winner = document.createElement("p")
+        if (humanScore >=  5) {
+            winner.textContent = "Congratulations, You Win!"
+            document.body.appendChild(winner)
+
+        } else if (computerScore >= 5) {
+            winner.textContent = "You lost to the computer..."
+            document.body.appendChild(winner)
+        }
+
     }
  }
 
